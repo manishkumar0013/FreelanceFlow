@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Clients — FreelanceFlow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <aside class="sidebar" id="sidebar">
+            <div class="brand"><span class="brand-mark">F</span><span>Freelance<span>Flow</span></span></div>
+            <nav class="nav"><a class="nav-link" href="index.html"><span>⌂</span> Dashboard</a><a class="nav-link"
+                    href="projects.html"><span>▣</span> Projects <b id="navProjectCount">0</b></a><a class="nav-link active"
+                    href="clients.html"><span>♙</span> Clients <b id="navClientCount">0</b></a><a class="nav-link"
+                    href="tasks.html"><span>✓</span> Tasks <b id="navTaskCount">0</b></a><a class="nav-link"
+                    href="invoices.html"><span>▤</span> Invoices</a></nav>
+            <div class="nav-label">WORKSPACE</div>
+            <nav class="nav"><a class="nav-link" href="settings.html"><span>⚙</span> Settings</a></nav>
+            <div class="sidebar-bottom">
+                <div class="upgrade-card"><strong>Pro workspace</strong>
+                    <p>Unlock advanced reports and automation.</p><button class="btn btn-light">Upgrade</button>
+                </div>
+                <div class="user-mini">
+                    <div class="avatar" id="sideAvatar">FF</div>
+                    <div><strong id="sideName">Freelance User</strong><small id="sideEmail">Logged in</small></div>
+                </div>
+            </div>
+        </aside>
+        <main class="main">
+            <header class="topbar"><button class="icon-btn menu-btn" id="menuBtn">☰</button>
+                <div class="search"><span>⌕</span><input type="search" placeholder="Search clients..."></div>
+                <div class="top-actions"><button class="icon-btn">♢<i></i></button><button class="icon-btn"
+                        id="themeBtn">◐</button>
+                    <div class="avatar" id="topAvatar">FF</div>
+                </div>
+            </header>
+            <div class="content">
+                <section class="page-heading">
+                    <div>
+                        <p class="eyebrow">RELATIONSHIPS</p>
+                        <h1>Clients</h1>
+                        <p class="muted">Keep client details, projects and billing organized.</p><small id="clientLimitInfo" class="muted" style="display:block;margin-top:6px">Checking plan…</small>
+                    </div><button class="btn btn-primary" id="addClientBtn">＋ Add Client</button>
+                </section>
+                <div class="client-grid" id="clientGrid">
+                    <article class="client-card">
+                        <div class="avatar lg">AS</div>
+                        <div>
+                            <h3>Acme Studios</h3>
+                            <p>hello@acmestudios.com</p><span class="badge success">3 active projects</span>
+                        </div><button class="more">•••</button>
+                        <div class="client-stats"><span>Total billed <strong>₹3,20,000</strong></span><span>Last project
+                                <strong>Aug 15</strong></span></div>
+                    </article>
+                    <article class="client-card">
+                        <div class="avatar lg">NL</div>
+                        <div>
+                            <h3>Nova Labs</h3>
+                            <p>team@novalabs.io</p><span class="badge success">2 active projects</span>
+                        </div><button class="more">•••</button>
+                        <div class="client-stats"><span>Total billed <strong>₹2,15,000</strong></span><span>Last project
+                                <strong>Aug 12</strong></span></div>
+                    </article>
+                    <article class="client-card">
+                        <div class="avatar lg">OT</div>
+                        <div>
+                            <h3>Orbit Tech</h3>
+                            <p>contact@orbittech.com</p><span class="badge warning">1 active project</span>
+                        </div><button class="more">•••</button>
+                        <div class="client-stats"><span>Total billed <strong>₹1,85,000</strong></span><span>Last project
+                                <strong>Aug 08</strong></span></div>
+                    </article>
+                    <article class="client-card">
+                        <div class="avatar lg">PH</div>
+                        <div>
+                            <h3>Pixel House</h3>
+                            <p>studio@pixelhouse.co</p><span class="badge neutral">1 active project</span>
+                        </div><button class="more">•••</button>
+                        <div class="client-stats"><span>Total billed <strong>₹92,500</strong></span><span>Last project
+                                <strong>Aug 02</strong></span></div>
+                    </article>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div id="toast" class="toast"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>

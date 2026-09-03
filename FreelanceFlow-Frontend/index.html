@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreelanceFlow — Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><span class="brand-mark">F</span><span>Freelance<span>Flow</span></span></div>
+      <nav class="nav">
+        <a class="nav-link active" href="index.html"><span>⌂</span> Dashboard</a>
+        <a class="nav-link" href="projects.html"><span>▣</span> Projects <b id="navProjectCount">0</b></a>
+        <a class="nav-link" href="clients.html"><span>♙</span> Clients <b id="navClientCount">0</b></a>
+        <a class="nav-link" href="tasks.html"><span>✓</span> Tasks <b id="navTaskCount">0</b></a><a class="nav-link" href="time.html"><span>◷</span> Time Tracking</a>
+        <a class="nav-link" href="invoices.html"><span>▤</span> Invoices</a>
+      </nav>
+      <div class="nav-label">WORKSPACE</div>
+      <nav class="nav">
+        <a class="nav-link" href="settings.html"><span>⚙</span> Settings</a>
+        <a class="nav-link" href="#"><span>?</span> Help & Support</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="upgrade-card">
+          <strong>Pro workspace</strong>
+          <p>Unlock advanced reports and automation.</p>
+          <button class="btn btn-light">Upgrade</button>
+        </div>
+        <div class="user-mini">
+          <div class="avatar" id="sideAvatar">FF</div>
+          <div><strong id="sideName">Freelance User</strong><small id="sideEmail">Logged in</small></div>
+          <span>•••</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-btn menu-btn" id="menuBtn">☰</button>
+        <div class="search"><span>⌕</span><input id="globalSearch" type="search"
+            placeholder="Search projects, clients, tasks..."></div>
+        <div class="top-actions">
+          <button class="icon-btn" title="Notifications">♢<i></i></button>
+          <button class="icon-btn" title="Theme" id="themeBtn">◐</button>
+          <div class="avatar" id="topAvatar">FF</div>
+        </div>
+      </header>
+
+      <div class="content">
+        <section class="page-heading">
+          <div>
+            <p class="eyebrow">FREELANCE WORKSPACE</p>
+            <h1 id="dashboardGreeting">Good morning, 👋</h1>
+            <p class="muted">Here’s what’s happening across your freelance business.</p>
+          </div>
+          <button class="btn btn-primary" id="dashboardNewProjectBtn">＋ New Project</button>
+        </section>
+
+        <section class="stats-grid">
+          <article class="stat-card">
+            <div class="stat-top"><span>Total earnings</span><span class="stat-icon green">₹</span></div>
+            <strong id="totalEarnings">₹0</strong><small class="positive">From paid invoices</small>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top"><span>Active projects</span><span class="stat-icon purple">▣</span></div>
+            <strong id="activeProjects">0</strong><small class="positive">Current projects</small>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top"><span>Pending tasks</span><span class="stat-icon orange">✓</span></div>
+            <strong id="pendingTasks">0</strong><small class="warning">Tasks not completed</small>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top"><span>Outstanding</span><span class="stat-icon blue">▤</span></div>
+            <strong id="outstandingAmount">₹0</strong><small class="negative">Unpaid invoices</small>
+          </article>
+        </section>
+
+        <section class="dashboard-grid">
+          <article class="panel revenue-panel">
+            <div class="panel-head">
+              <div>
+                <h2>Revenue overview</h2>
+                <p class="muted">Your earnings over the last 6 months</p>
+              </div>
+              <select id="revenueRange">
+                <option>Last 6 months</option>
+                <option>Last 12 months</option>
+              </select>
+            </div>
+            <div class="chart">
+              <div class="y-axis" id="revenueYAxis"><span>₹0</span><span>₹0</span><span>₹0</span><span>₹0</span></div>
+              <div class="bars">
+                <div class="bar-col"><div class="bar" style="height:43%"></div><span>Mar</span></div>
+                <div class="bar-col"><div class="bar" style="height:58%"></div><span>Apr</span></div>
+                <div class="bar-col"><div class="bar" style="height:48%"></div><span>May</span></div>
+                <div class="bar-col"><div class="bar" style="height:71%"></div><span>Jun</span></div>
+                <div class="bar-col"><div class="bar" style="height:64%"></div><span>Jul</span></div>
+                <div class="bar-col"><div class="bar current" style="height:84%"></div><span>Aug</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>Upcoming deadlines</h2>
+                <p class="muted">Projects needing attention</p>
+              </div>
+              <a href="projects.html">View all</a>
+            </div>
+            <div class="deadline-list" id="deadlineList">
+              <div class="deadline"><span class="dot purple"></span>
+                <div><strong>Loading projects...</strong><small>Please wait</small></div><time>—</time>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="panel projects-panel">
+          <div class="panel-head">
+            <div>
+              <h2>Active projects</h2>
+              <p class="muted">Track progress across your current work</p>
+            </div>
+            <a href="projects.html">View all projects →</a>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>PROJECT</th>
+                  <th>CLIENT</th>
+                  <th>DEADLINE</th>
+                  <th>PROGRESS</th>
+                  <th>STATUS</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="dashboardProjects">
+                <tr>
+                  <td colspan="6">
+                    <p class="muted">Loading projects...</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+
+
+</body>
+</html>

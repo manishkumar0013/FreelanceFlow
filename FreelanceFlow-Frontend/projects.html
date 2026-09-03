@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Projects — FreelanceFlow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <aside class="sidebar" id="sidebar">
+            <div class="brand"><span class="brand-mark">F</span><span>Freelance<span>Flow</span></span></div>
+            <nav class="nav"><a class="nav-link" href="index.html"><span>⌂</span> Dashboard</a><a
+                    class="nav-link active" href="projects.html"><span>▣</span> Projects <b>•</b></a><a class="nav-link"
+                    href="clients.html"><span>♙</span> Clients <b>•</b></a><a class="nav-link"
+                    href="tasks.html"><span>✓</span> Tasks <b id="navTaskCount">0</b></a><a class="nav-link"
+                    href="invoices.html"><span>▤</span> Invoices</a></nav>
+            <div class="nav-label">WORKSPACE</div>
+            <nav class="nav"><a class="nav-link" href="settings.html"><span>⚙</span> Settings</a><a class="nav-link"
+                    href="#"><span>?</span> Help & Support</a></nav>
+            <div class="sidebar-bottom">
+                <div class="upgrade-card"><strong>Pro workspace</strong>
+                    <p>Unlock advanced reports and automation.</p><button class="btn btn-light">Upgrade</button>
+                </div>
+                <div class="user-mini">
+                    <div class="avatar" id="sideAvatar">FF</div>
+                    <div><strong id="sideName">Freelance User</strong><small id="sideEmail">Logged in</small></div>
+                </div>
+            </div>
+        </aside>
+        <main class="main">
+            <header class="topbar"><button class="icon-btn menu-btn" id="menuBtn">☰</button>
+                <div class="search"><span>⌕</span><input type="search" placeholder="Search projects..."></div>
+                <div class="top-actions"><button class="icon-btn">♢<i></i></button><button class="icon-btn"
+                        id="themeBtn">◐</button>
+                    <div class="avatar" id="topAvatar">FF</div>
+                </div>
+            </header>
+            <div class="content">
+                <section class="page-heading">
+                    <div>
+                        <p class="eyebrow">WORKSPACE</p>
+                        <h1>Projects</h1>
+                        <p class="muted">Manage all your freelance projects in one place.</p>
+                    </div><button class="btn btn-primary" id="addProjectBtn">＋ New Project</button>
+                </section>
+                <div class="toolbar">
+                    <div class="tabs"><button class="tab active" data-filter="all">All projects <b id="allProjectCount">0</b></button><button class="tab" data-filter="active">Active <b id="activeProjectCount">0</b></button><button class="tab" data-filter="completed">Completed <b id="completedProjectCount">0</b></button><button class="tab" data-filter="archived">Archived <b>0</b></button></div><select>
+                        <option>Newest first</option>
+                        <option>Deadline</option>
+                        <option>Budget</option>
+                    </select>
+                </div>
+                <section class="project-grid" id="projectGrid">
+                    <article class="project-card">
+                        <div class="project-cover cover-one">AC</div>
+                        <div class="project-body">
+                            <div class="card-row"><span class="badge success">On track</span><button
+                                    class="more">•••</button></div>
+                            <h3>Brand identity package</h3>
+                            <p>Complete visual identity system for Acme Studios.</p>
+                            <div class="client-line">
+                                <div class="avatar sm">AS</div> Acme Studios
+                            </div>
+                            <div class="progress-row">
+                                <div class="progress"><i style="width:82%"></i></div><span>82%</span>
+                            </div>
+                            <div class="card-meta"><span>Due Aug 22</span><strong>₹1,20,000</strong></div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-cover cover-two">NL</div>
+                        <div class="project-body">
+                            <div class="card-row"><span class="badge warning">At risk</span><button
+                                    class="more">•••</button></div>
+                            <h3>Landing page redesign</h3>
+                            <p>High-converting marketing website for Nova Labs.</p>
+                            <div class="client-line">
+                                <div class="avatar sm">NL</div> Nova Labs
+                            </div>
+                            <div class="progress-row">
+                                <div class="progress"><i style="width:64%"></i></div><span>64%</span>
+                            </div>
+                            <div class="card-meta"><span>Due Aug 24</span><strong>₹85,000</strong></div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-cover cover-three">OT</div>
+                        <div class="project-body">
+                            <div class="card-row"><span class="badge success">On track</span><button
+                                    class="more">•••</button></div>
+                            <h3>Mobile app UI kit</h3>
+                            <p>Reusable UI components for Orbit's new product.</p>
+                            <div class="client-line">
+                                <div class="avatar sm">OT</div> Orbit Tech
+                            </div>
+                            <div class="progress-row">
+                                <div class="progress"><i style="width:47%"></i></div><span>47%</span>
+                            </div>
+                            <div class="card-meta"><span>Due Aug 27</span><strong>₹1,45,000</strong></div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-cover cover-four">PH</div>
+                        <div class="project-body">
+                            <div class="card-row"><span class="badge neutral">Planning</span><button
+                                    class="more">•••</button></div>
+                            <h3>Social media templates</h3>
+                            <p>30 editable social templates for Pixel House.</p>
+                            <div class="client-line">
+                                <div class="avatar sm">PH</div> Pixel House
+                            </div>
+                            <div class="progress-row">
+                                <div class="progress"><i style="width:28%"></i></div><span>28%</span>
+                            </div>
+                            <div class="card-meta"><span>Due Aug 30</span><strong>₹52,500</strong></div>
+                        </div>
+                    </article>
+                </section>
+            </div>
+        </main>
+    </div>
+    <div id="toast" class="toast"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>

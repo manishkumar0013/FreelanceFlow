@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Invoices — FreelanceFlow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <aside class="sidebar" id="sidebar">
+            <div class="brand"><span class="brand-mark">F</span><span>Freelance<span>Flow</span></span></div>
+            <nav class="nav"><a class="nav-link" href="index.html"><span>⌂</span> Dashboard</a><a class="nav-link"
+                    href="projects.html"><span>▣</span> Projects <b id="navProjectCount">0</b></a><a class="nav-link"
+                    href="clients.html"><span>♙</span> Clients <b>•</b></a><a class="nav-link"
+                    href="tasks.html"><span>✓</span> Tasks <b id="navTaskCount">0</b></a><a class="nav-link active"
+                    href="invoices.html"><span>▤</span> Invoices</a></nav>
+            <div class="nav-label">WORKSPACE</div>
+            <nav class="nav"><a class="nav-link" href="settings.html"><span>⚙</span> Settings</a></nav>
+            <div class="sidebar-bottom">
+                <div class="upgrade-card"><strong>Pro workspace</strong>
+                    <p>Unlock advanced reports and automation.</p><button class="btn btn-light">Upgrade</button>
+                </div>
+                <div class="user-mini">
+                    <div class="avatar" id="sideAvatar">FF</div>
+                    <div><strong id="sideName">Freelance User</strong><small id="sideEmail">Logged in</small></div>
+                </div>
+            </div>
+        </aside>
+        <main class="main">
+            <header class="topbar"><button class="icon-btn menu-btn" id="menuBtn">☰</button>
+                <div class="search"><span>⌕</span><input type="search" placeholder="Search invoices..."></div>
+                <div class="top-actions"><button class="icon-btn">♢<i></i></button><button class="icon-btn"
+                        id="themeBtn">◐</button>
+                    <div class="avatar" id="topAvatar">FF</div>
+                </div>
+            </header>
+            <div class="content">
+                <section class="page-heading">
+                    <div>
+                        <p class="eyebrow">BILLING</p>
+                        <h1>Invoices</h1>
+                        <p class="muted">Create, track and manage client payments.</p>
+                    </div><button class="btn btn-primary" id="createInvoiceBtn">＋ Create Invoice</button>
+                </section>
+                <section class="stats-grid invoice-stats">
+                    <article class="stat-card">
+                        <div class="stat-top"><span>Paid</span><span class="stat-icon green">✓</span></div>
+                        <strong id="paidInvoiceAmount">₹0</strong><small id="paidInvoiceCount">0 invoices</small>
+                    </article>
+                    <article class="stat-card">
+                        <div class="stat-top"><span>Pending</span><span class="stat-icon orange">◷</span></div>
+                        <strong id="pendingInvoiceAmount">₹0</strong><small id="pendingInvoiceCount">0 invoices</small>
+                    </article>
+                    <article class="stat-card">
+                        <div class="stat-top"><span>Overdue</span><span class="stat-icon red">!</span></div>
+                        <strong id="overdueInvoiceAmount">₹0</strong><small id="overdueInvoiceCount" class="negative">0 invoices</small>
+                    </article>
+                </section>
+                <section class="panel projects-panel">
+                    <div class="panel-head">
+                        <div>
+                            <h2>Recent invoices</h2>
+                            <p class="muted">Your latest billing activity</p>
+                        </div><select>
+                            <option>All statuses</option>
+                            <option>Paid</option>
+                            <option>Pending</option>
+                            <option>Overdue</option>
+                        </select>
+                    </div>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>INVOICE</th>
+                                    <th>CLIENT</th>
+                                    <th>ISSUED</th>
+                                    <th>DUE DATE</th>
+                                    <th>AMOUNT</th>
+                                    <th>STATUS</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="invoiceTableBody">
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <div id="toast" class="toast"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Tasks — FreelanceFlow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <aside class="sidebar" id="sidebar">
+            <div class="brand"><span class="brand-mark">F</span><span>Freelance<span>Flow</span></span></div>
+            <nav class="nav"><a class="nav-link" href="index.html"><span>⌂</span> Dashboard</a><a class="nav-link"
+                    href="projects.html"><span>▣</span> Projects <b id="navProjectCount">0</b></a><a class="nav-link"
+                    href="clients.html"><span>♙</span> Clients <b>•</b></a><a class="nav-link active"
+                    href="tasks.html"><span>✓</span> Tasks <b id="navTaskCount">0</b></a><a class="nav-link"
+                    href="invoices.html"><span>▤</span> Invoices</a></nav>
+            <div class="nav-label">WORKSPACE</div>
+            <nav class="nav"><a class="nav-link" href="settings.html"><span>⚙</span> Settings</a></nav>
+            <div class="sidebar-bottom">
+                <div class="upgrade-card"><strong>Pro workspace</strong>
+                    <p>Unlock advanced reports and automation.</p><button class="btn btn-light">Upgrade</button>
+                </div>
+                <div class="user-mini">
+                    <div class="avatar" id="sideAvatar">FF</div>
+                    <div><strong id="sideName">Freelance User</strong><small id="sideEmail">Logged in</small></div>
+                </div>
+            </div>
+        </aside>
+        <main class="main">
+            <header class="topbar"><button class="icon-btn menu-btn" id="menuBtn">☰</button>
+                <div class="search"><span>⌕</span><input type="search" placeholder="Search tasks..."></div>
+                <div class="top-actions"><button class="icon-btn">♢<i></i></button><button class="icon-btn"
+                        id="themeBtn">◐</button>
+                    <div class="avatar" id="topAvatar">FF</div>
+                </div>
+            </header>
+            <div class="content">
+                <section class="page-heading">
+                    <div>
+                        <p class="eyebrow">WORK MANAGEMENT</p>
+                        <h1>Tasks</h1>
+                        <p class="muted">Stay on top of everything you need to deliver.</p>
+                    <button class="btn btn-primary" id="addTaskBtn">＋ New Task</button>
+                </section>
+                <div class="task-board" id="taskBoard">
+                    <div class="task-column">
+                        <div class="column-head">
+                            <h3>To do <span>5</span></h3><button>＋</button>
+                        </div>
+                        <div class="task-card"><span class="priority high">High</span>
+                            <h4>Finalize logo concepts</h4>
+                            <p>Brand identity package</p>
+                            <div class="task-foot"><span>Due Aug 21</span>
+                                <div class="avatar xs">AM</div>
+                            </div>
+                        </div>
+                        <div class="task-card"><span class="priority medium">Medium</span>
+                            <h4>Write homepage copy</h4>
+                            <p>Landing page redesign</p>
+                            <div class="task-foot"><span>Due Aug 23</span>
+                                <div class="avatar xs">AM</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task-column">
+                        <div class="column-head">
+                            <h3>In progress <span>4</span></h3><button>＋</button>
+                        </div>
+                        <div class="task-card"><span class="priority high">High</span>
+                            <h4>Build responsive hero</h4>
+                            <p>Landing page redesign</p>
+                            <div class="task-foot"><span>Due Aug 22</span>
+                                <div class="avatar xs">AM</div>
+                            </div>
+                        </div>
+                        <div class="task-card"><span class="priority medium">Medium</span>
+                            <h4>Component documentation</h4>
+                            <p>Mobile app UI kit</p>
+                            <div class="task-foot"><span>Due Aug 25</span>
+                                <div class="avatar xs">AM</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task-column">
+                        <div class="column-head">
+                            <h3>Done <span>12</span></h3><button>＋</button>
+                        </div>
+                        <div class="task-card done"><span class="priority low">Done</span>
+                            <h4>Client discovery call</h4>
+                            <p>Brand identity package</p>
+                            <div class="task-foot"><span>Completed Aug 18</span>
+                                <div class="avatar xs">AM</div>
+                            </div>
+                        </div>
+                        <div class="task-card done"><span class="priority low">Done</span>
+                            <h4>Wireframe approval</h4>
+                            <p>Mobile app UI kit</p>
+                            <div class="task-foot"><span>Completed Aug 17</span>
+                                <div class="avatar xs">AM</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div id="toast" class="toast"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>

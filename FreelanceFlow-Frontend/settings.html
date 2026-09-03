@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Settings — FreelanceFlow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <aside class="sidebar" id="sidebar">
+            <div class="brand"><span class="brand-mark">F</span><span>Freelance<span>Flow</span></span></div>
+            <nav class="nav"><a class="nav-link" href="index.html"><span>⌂</span> Dashboard</a><a class="nav-link"
+                    href="projects.html"><span>▣</span> Projects <b>•</b></a><a class="nav-link"
+                    href="clients.html"><span>♙</span> Clients <b>•</b></a><a class="nav-link"
+                    href="tasks.html"><span>✓</span> Tasks <b>•</b></a><a class="nav-link"
+                    href="invoices.html"><span>▤</span> Invoices</a></nav>
+            <div class="nav-label">WORKSPACE</div>
+            <nav class="nav"><a class="nav-link active" href="settings.html"><span>⚙</span> Settings</a></nav>
+            <div class="sidebar-bottom">
+                <div class="upgrade-card"><strong>Pro workspace</strong>
+                    <p id="planDescription">Free plan • Up to 2 clients</p><button class="btn btn-light" id="settingsUpgradeBtn">Upgrade to Pro</button>
+                </div>
+                <div class="user-mini">
+                    <div class="avatar" id="sideAvatar">FF</div>
+                    <div><strong id="sideName">Freelance User</strong><small id="sideEmail">Logged in</small></div>
+                </div>
+            </div>
+        </aside>
+        <main class="main">
+            <header class="topbar"><button class="icon-btn menu-btn" id="menuBtn">☰</button>
+                <div class="search"><span>⌕</span><input type="search" placeholder="Search settings..."></div>
+                <div class="top-actions"><button class="icon-btn">♢<i></i></button><button class="icon-btn"
+                        id="themeBtn">◐</button>
+                    <div class="avatar" id="topAvatar">FF</div>
+                </div>
+            </header>
+            <div class="content">
+                <section class="page-heading">
+                    <div>
+                        <p class="eyebrow">WORKSPACE</p>
+                        <h1>Settings</h1>
+                        <p class="muted">Manage your profile and workspace preferences.</p>
+                    </div>
+                </section>
+                <section class="settings-grid">
+                    <div class="settings-nav"><button
+                            class="active">Profile</button><button>Workspace</button><button>Notifications</button><button>Billing</button>
+                    </div>
+                    <div class="panel settings-panel">
+                        <h2>Profile information</h2>
+                        <p class="muted">Update your personal details and public profile.</p>
+                        <div class="profile-big">
+                            <div class="avatar xl" id="profileAvatar">FF</div>
+                            <div>
+                                <h3 id="profileDisplayName">Freelance User</h3>
+                                <p>Freelance Designer & Developer</p><button class="btn btn-secondary" id="changePhotoBtn">Change photo</button>
+                            </div>
+                        </div>
+                        <div class="form-grid"><label>Full name<input id="profileName" value=""></label><label>Email address<input id="profileEmail" value=""></label><label>Timezone<select>
+                                    <option>Asia/Kolkata (GMT+5:30)</option>
+                                </select></label><label>Currency<select>
+                                    <option>Indian Rupee (₹)</option>
+                                </select></label></div>
+                        <div class="settings-actions"><button class="btn btn-secondary">Cancel</button><button class="btn btn-primary" id="saveProfileBtn">Save changes</button><button class="btn btn-secondary" id="logoutBtn" type="button">Log out</button></div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <div id="toast" class="toast"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
