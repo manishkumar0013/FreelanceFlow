@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:5000/api";
+const API_BASE_URL = "https://freelanceflow-backend-9kir.onrender.com/api";
 const body = document.body;
 const themeBtn = document.getElementById("themeBtn");
 const menuBtn = document.getElementById("menuBtn");
